@@ -1,0 +1,9 @@
+@mixin mq($width: 'desktop') {
+  @if ($width=='desktop') {
+
+    @media (min-width: 900px) {
+      @content
+    }
+  }
+
+}

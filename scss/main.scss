@@ -1,0 +1,15 @@
+@import "helpers/reset";
+@import "config/mixin";
+@import "config/variable";
+
+body {
+  background-image: url('../images/pattern-background-mobile.svg');
+  background-repeat: no-repeat;
+  background-color: $pale-blue;
+  background-size: cover; 
+  
+  @include mq('desktop') 
+  {
+    background-image: url('../images/pattern-background-desktop.svg');
+  }
+}
