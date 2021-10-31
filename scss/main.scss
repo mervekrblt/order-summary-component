@@ -3,13 +3,131 @@
 @import "config/variable";
 
 body {
+  width: 100%;
+  height: 100%;
+  position: fixed;
   background-image: url('../images/pattern-background-mobile.svg');
   background-repeat: no-repeat;
   background-color: $pale-blue;
-  background-size: cover; 
-  
-  @include mq('desktop') 
-  {
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: $font;
+
+  @include mq('desktop') {
     background-image: url('../images/pattern-background-desktop.svg');
+    background-size: auto;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: $mobile-width;
+  background-color: white;
+  border-radius: $border-radius;
+  box-shadow: 2px 10px 10px rgba($desaturated-blue, 0.5);
+
+  @include mq('tablet') {
+    width: $desktop-width;
+  }
+
+  img {
+    width: $mobile-width;
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+
+    @include mq('tablet') {
+      width: $desktop-width;
+    }
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  &-header {
+    font-weight: 900;
+    font-size: 1.5rem;
+    margin-top: $margin;
+  }
+
+  &-text {
+    color: $desaturated-blue;
+    text-align: center;
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: $margin;
+  }
+
+  &-plan {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 260px;
+    background-color: $very-pale-blue;
+    margin-top: $margin;
+    border-radius: $border-radius;
+    padding: 20px;
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+
+    &-text {
+      display: flex;
+      align-items: center;
+      height: 40px;
+
+      img {
+        margin-right: 15px;
+      }
+
+      .first {
+        font-weight: 900;
+        margin-bottom: 10px;
+      }
+
+      .second {
+        color: $desaturated-blue;
+      }
+    }
+  }
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: $margin;
+  margin-bottom: $margin;
+  :hover {
+    cursor: pointer;
+  }
+}
+
+.button {
+  display: inline-block;
+  width: 300px;
+  height: 40px;
+  border-radius: $border-radius;
+  font-family: $font;
+  font-size: 16px;
+  color: $desaturated-blue;
+  background: transparent;
+  border: hidden;
+
+  &-blue {
+    background-color: $bright-blue;
+    color: $very-pale-blue;
+    font-weight: 600;
+    box-shadow: 8px 10px 10px 1px rgba($desaturated-blue, 0.5);
   }
 }

@@ -1,7 +1,13 @@
 @mixin mq($width: 'desktop') {
   @if ($width=='desktop') {
 
-    @media (min-width: 900px) {
+    @media (min-width: 1100px) {
+      @content
+    }
+  }
+
+  @else if($width=='tablet') {
+    @media (min-width: 400px) {
       @content
     }
   }
