@@ -4,5 +4,5 @@ This is my first frontend challenge exercise.
 
 You can see my solution with [this link](https://mervekrblt.github.io/order-summary-component/)
 
-[Frontend Master Profile](https://www.frontendmentor.io/profile/mervekrblt)
+[Frontend Mentor Profile](https://www.frontendmentor.io/profile/mervekrblt)
 
